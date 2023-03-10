@@ -131,6 +131,23 @@ nav ul a {
 
 .about-me .img-container img {
     width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.about-me .img-container .line{
+    width: calc(17.6% + 50px);
+    height: calc(91% + 50px);
+    border: 1px solid var(--purple);
+
+    position: absolute;
+    top: 109%;
+    left: 1609px ;
+}
+
+.about-me .img-container .line.green{
+    transform: rotate(1deg);
+    color: var(--green);
 }
 
 /*Responsitividade*/
