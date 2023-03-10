@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+    --purple: #528DE2;
+    --green: #15CDCB;
+    --bg-dark: #212226;
+    --light-grey: #E0DEDE;
+    --red: #FF0000;
+
+/*cor real verede
+
+#15CDCB*/
+
+    --menu-height: 65px;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    margin: 0;
+    background: var(--bg-dark);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+p {
+    color: var(--light-grey);
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+button {
+    background: var(--purple);
+    border: 0;
+    border-radius: 16px;
+    padding: 8px 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header {
+
+    height: calc(100vh - var(--menu-height));
+    align-items: center;
+    display: flex;
+}
+
+header .container img{
+    display: none;
+}
+
+header .container {
+    width: 50%;
+    height: fit-content;
+    padding: 0 100px;
+
+}
+
+header .container h1 {
+    color: var(--green);
+}
+
+header .container button {
+    margin-top: 40px;
+}
+
+nav {
+    display: flex;
+    height: var(--menu-height);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav img {
+    height: 45px;
+}
+
+nav ul a {
+    font-size: 24px;
+    color: var(--green);
+    text-decoration: none;
+    margin: 0 35px;
+}
+
+section {
+    height: 1500px;
+    background: purple;
+}
+
+/*Responsitividade*/
+@media (max-width:1000px){
+    header .container {
+        width: 100%;
+    }
+    
+    nav{
+        padding: 0 30px ;
+    }
+
+    nav ul a{
+        font-size: 18px;
+    }
+}
+/*TABLET*/
+
+@media (max-width: 767px){
+  header .container{
+    width:100;
+    padding: 0 30px;
+    
+  }
+}
+
+header .container img{
+    display: inline;
+    margin-bottom: 70px;
+}
+
+nav img{
+    display: none;
+}
+
+
+
+nav{
+    padding: 0 30px;
+}
+
+nav ul a{
+    font-size: 16px;
+}
+/* celular */
+@media (max-width: 480px){
+header .container {
+    padding: 0 40px ;
+}
+}
