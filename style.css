@@ -7,7 +7,7 @@
     --light-grey: #E0DEDE;
     --red: #FF0000;
 
-/*cor real verede
+    /*cor real verede
 
 #15CDCB*/
 
@@ -57,6 +57,14 @@ button {
     font-size: 18px;
 }
 
+.title-purple {
+    color: var(--purple);
+}
+
+.title-green {
+    color: var(--green);
+}
+
 header {
 
     height: calc(100vh - var(--menu-height));
@@ -64,7 +72,7 @@ header {
     display: flex;
 }
 
-header .container img{
+header .container img {
     display: none;
 }
 
@@ -73,10 +81,6 @@ header .container {
     height: fit-content;
     padding: 0 100px;
 
-}
-
-header .container h1 {
-    color: var(--green);
 }
 
 header .container button {
@@ -110,56 +114,72 @@ nav ul a {
     margin: 0 35px;
 }
 
-section {
-    height: 1500px;
-    background: purple;
+.about-me {
+    display: flex;
+    padding: 100px;
+}
+
+.about-me .container {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.about-me .img-container {
+    width: 50%;
+    text-align: center;
+}
+
+.about-me .img-container img {
+    width: 40%;
 }
 
 /*Responsitividade*/
-@media (max-width:1000px){
+@media (max-width:1000px) {
     header .container {
         width: 100%;
     }
-    
-    nav{
-        padding: 0 30px ;
+
+    nav {
+        padding: 0 30px;
     }
 
-    nav ul a{
+    nav ul a {
         font-size: 18px;
     }
 }
+
 /*TABLET*/
 
-@media (max-width: 767px){
-  header .container{
-    width:100;
-    padding: 0 30px;
-    
-  }
+@media (max-width: 767px) {
+    header .container {
+        width: 100;
+        padding: 0 30px;
+
+    }
 }
 
-header .container img{
+header .container img {
     display: inline;
     margin-bottom: 70px;
 }
 
-nav img{
+nav img {
     display: none;
 }
 
 
 
-nav{
+nav {
     padding: 0 30px;
 }
 
-nav ul a{
+nav ul a {
     font-size: 16px;
 }
+
 /* celular */
-@media (max-width: 480px){
-header .container {
-    padding: 0 40px ;
-}
+@media (max-width: 480px) {
+    header .container {
+        padding: 0 40px;
+    }
 }
