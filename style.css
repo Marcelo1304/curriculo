@@ -95,6 +95,8 @@ nav {
     padding: 0 100px;
     position: sticky;
     top: 0;
+
+    z-index: 99;
 }
 
 nav ul {
@@ -127,25 +129,26 @@ nav ul a {
 .about-me .img-container {
     width: 50%;
     text-align: center;
+    position: relative;
 }
 
 .about-me .img-container img {
     width: 40%;
     height: 100%;
-    position: relative;
+    object-fit: cover;
 }
 
-.about-me .img-container .line{
-    width: calc(17.6% + 50px);
-    height: calc(91% + 50px);
+.about-me .img-container .line {
+    width: calc(37.9% + 50px);
+    height: calc(105% + -12px);
     border: 1px solid var(--purple);
 
     position: absolute;
-    top: 109%;
-    left: 1609px ;
+    top: -2%;
+    left: 340px;
 }
 
-.about-me .img-container .line.green{
+.about-me .img-container .line.green {
     transform: rotate(1deg);
     color: var(--green);
 }
@@ -163,35 +166,44 @@ nav ul a {
     nav ul a {
         font-size: 18px;
     }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .about-me .container,
+    .about-me .img-container {
+        width: 148%;
+    }
+
+    .about-me .container {
+        padding-right: 0;
+    }
+
+    .about-me .img-container {
+        margin: 70px 0px;
+    }
 }
 
 /*TABLET*/
 
 @media (max-width: 767px) {
-    header .container {
-        width: 100;
-        padding: 0 30px;
-
+    header .container img {
+        display: inline;
+        margin-bottom: 70px;
     }
-}
 
-header .container img {
-    display: inline;
-    margin-bottom: 70px;
-}
+    nav img {
+        display: none;
+    }
 
-nav img {
-    display: none;
-}
+    nav ul {
+        padding: 0;
+    }
 
-
-
-nav {
-    padding: 0 30px;
-}
-
-nav ul a {
-    font-size: 16px;
+    nav ul a {
+        font-size: 16px;
+    }
 }
 
 /* celular */
@@ -199,4 +211,27 @@ nav ul a {
     header .container {
         padding: 0 40px;
     }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        top: unset;
+        padding: 0 15px;
+    }
+
+    nav ul a svg {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .about-me {
+        padding: 40px;
+        position: relative;
+    }
+
+     .about-me .container, .about-me .img-container {
+        width: 128%;
+    }
+
 }
